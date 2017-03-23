@@ -1,0 +1,3 @@
+<?php
+    $filename = 'messages.txt';
+?>

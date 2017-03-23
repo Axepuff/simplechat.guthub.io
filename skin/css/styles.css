@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('/skin/fonts/Karla-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('/skin/fonts/Karla-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+.icon-back, .icon-back-black, .icon-more, .icon-more-black
+{ display: inline-block; background: url('/skin/image/sprite.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+
+.icon-back { background-position: -0px -0px; width: 14px; height: 20px; }
+.icon-back-black { background-position: -0px -20px; width: 14px; height: 20px; }
+.icon-more { background-position: -0px -40px; width: 10px; height: 28px; }
+.icon-more-black { background-position: -0px -68px; width: 10px; height: 28px; }
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', Arial, sans-serif;
+}
+
+.main-container {
+    margin: 0 auto;
+    max-width: 750px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-panel,
+.send-panel {
+    flex:none;
+}
+
+
+.message-list {
+    flex: 1;
+}
+
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 35px 30px;
+    background: #000;
+    height: 128px;
+    color: #fff;
+    font-size: 34px;
+}
+
+.back-btn {
+
+}
+
+.top-panel__name {
+    color: #fff;
+    text-decoration: none;
+}
+
+.message-list::-webkit-scrollbar { width: 0; }
+.message-list { -ms-overflow-style: none; }
+.message-list { overflow: -moz-scrollbars-none; }
+
+.message-list {
+    background: #ceb9fe;
+    padding: 50px;
+    font-size: 0;
+    overflow-y: scroll;
+}
+
+.message {
+    background: #fff;
+    padding: 30px 60px;
+    margin-bottom: 110px;
+    position: relative;
+    width: auto;
+    display: inline-block;
+    box-shadow: 0 40px 50px 0 rgba(0,0,0,0.2);
+}
+
+.message-wrap_me {
+    text-align: right;
+}
+
+.message-wrap_me .message {
+    padding-right: 140px;
+}
+
+.message-wrap_user .message {
+    padding-left: 140px;
+}
+
+.message__text {
+    font-size: 30px;
+    line-height: 44px;
+}
+
+.message__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-wrap_me .message__img{
+    left: auto;
+    right: 0;
+}
+
+.message__img a img, .message__img a {
+    height: 100%;
+    width: 100%;
+}
+
+.message__time {
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    bottom: -35px;
+    right: 0;
+}
+
+.message-wrap_me .message__time {
+    right: auto;
+    left: 0;
+}
+
+.send-panel {
+    background: #ffec57;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.send-panel__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.send-panel__send-btn {
+    border: 0;
+    background: #ffec57;
+    font-size: 26px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.send-panel__textarea {
+    width: 80%;
+    border: 0;
+    background: #ffec57;
+    resize: none;
+    outline: none;
+    font-size: 30px;
+    line-height: 46px;
+    margin: 0;
+    overflow: hidden;
+}
+
+::-webkit-input-placeholder {
+    color: #000;
+    font-size: 30px;
+    line-height: 46px;
+}
+
+.more-btn .icon-more-black {
+    transform: rotate(90deg);
+    vertical-align: middle;
+}
+
+.more-btn:hover .icon-more {
+    background-position: -0px -68px; width: 10px; height: 28px;
+}
+
+.more-btn:hover .icon-more-black {
+    background-position: -0px -40px; width: 10px; height: 28px;
+}
